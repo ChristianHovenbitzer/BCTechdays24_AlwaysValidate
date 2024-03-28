@@ -5,6 +5,10 @@
       },
       {
         "path": "TriggerOrder"
+      },
+      {
+        "path": "TemporaryTables"
       }
-    ]
+    ],
+    "settings": {}
   }
