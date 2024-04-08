@@ -1,14 +1,22 @@
 {
     "folders": [
       {
+        "name": "1 - InfiniteLoop",
         "path": "InfiniteLoop"
       },
       {
+        "name": "2 - TriggerOrder",
         "path": "TriggerOrder"
       },
       {
+        "name": "3 - TemporaryTables",
         "path": "TemporaryTables"
+      },
+      {
+        "name": "4 - Performance",
+        "path": "Performance"
       }
+
     ],
     "settings": {}
   }

@@ -10,6 +10,11 @@ codeunit 50100 EventSubs
         exit(TriggerOrderList);
     end;
 
+    procedure ResetList()
+    begin
+        Clear(TriggerOrderList);
+    end;
+
     [EventSubscriber(ObjectType::Table, Database::ValidateOrderTable, OnBeforeValidateEvent, 'MyField', false, false)]
     local procedure OnBeforeValidateEvent(var Rec: Record ValidateOrderTable)
     begin

@@ -20,6 +20,12 @@ page 50100 ValidateOrderPage
                     begin
                         EventSubs.GetList().Add('ValidateOrderPage - OnValidate');
                     end;
+
+                    trigger OnLookup(var Text: Text): Boolean
+                    begin
+                        Text := '10';
+                        exit(true);
+                    end;
                 }
             }
         }
@@ -37,10 +43,13 @@ page 50100 ValidateOrderPage
                 var
                     Text: Text;
                     TxtBuilder: TextBuilder;
+                    LocalList, EmptyList : List of [Text];
                 begin
                     foreach Text in EventSubs.GetList() do
                         TxtBuilder.AppendLine(Text);
                     Message(TxtBuilder.ToText());
+
+                    EventSubs.ResetList();
                 end;
             }
         }
