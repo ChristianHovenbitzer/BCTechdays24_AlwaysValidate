@@ -1,6 +1,6 @@
 {
-  "id": "132e8288-8bd3-4cf1-a7b6-c87073c850f5",
-  "name": "TemporaryTables",
+  "id": "659e1a13-e8de-47e1-b9b9-e357009c037f",
+  "name": "NestedValidates",
   "publisher": "Default Publisher",
   "version": "1.0.0.0",
   "brief": "",
@@ -16,8 +16,8 @@
   "application": "24.0.0.0",
   "idRanges": [
     {
-      "from": 50200,
-      "to": 50249
+      "from": 50500,
+      "to": 50549
     }
   ],
   "resourceExposurePolicy": {

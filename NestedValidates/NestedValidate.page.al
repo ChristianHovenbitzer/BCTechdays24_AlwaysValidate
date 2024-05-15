@@ -1,9 +1,9 @@
-page 50400 ThirdParty
+page 50500 NestedValidate
 {
     ApplicationArea = All;
-    Caption = 'ThirdParty';
+    Caption = 'NestedValidate';
     PageType = Card;
-    SourceTable = ThirdParty;
+    SourceTable = NestedValidate;
 
     layout
     {

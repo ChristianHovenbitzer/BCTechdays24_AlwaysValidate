@@ -1,4 +1,4 @@
-table 50300 TemporaryDimensionsTable
+table 50200 TemporaryDimensionsTable
 {
     DataClassification = ToBeClassified;
     TableType = Temporary;
@@ -24,6 +24,7 @@ table 50300 TemporaryDimensionsTable
         field(3; GlobalDimension2Code; Code[20])
         {
             CaptionClass = '1,2,2';
+
             Caption = 'Shortcut Dimension 2 Code';
             TableRelation = "Dimension Value".Code where("Global Dimension No." = const(2),
                                                           Blocked = const(false));

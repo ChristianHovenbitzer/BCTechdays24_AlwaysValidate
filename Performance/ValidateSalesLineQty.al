@@ -1,4 +1,4 @@
-codeunit 50400 ValidateSalesLineQty
+codeunit 50300 ValidateSalesLineQty
 {
     Subtype = Test;
 

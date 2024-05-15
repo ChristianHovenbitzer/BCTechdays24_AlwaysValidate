@@ -1,4 +1,4 @@
-page 50300 TemporaryDimensionsPage
+page 50200 TemporaryDimensionsPage
 {
     ApplicationArea = All;
     Caption = 'TemporaryDimensionsPage';
