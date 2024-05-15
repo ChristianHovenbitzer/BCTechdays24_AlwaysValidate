@@ -15,6 +15,10 @@
       {
         "name": "4 - Performance",
         "path": "Performance"
+      },
+      {
+        "name": "5 - 3rd Party Extensions",
+        "path": "ThirdPartyExtensions"
       }
 
     ],
