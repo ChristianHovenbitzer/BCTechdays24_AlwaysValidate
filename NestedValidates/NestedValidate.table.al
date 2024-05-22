@@ -1,56 +1,35 @@
 table 50500 NestedValidate
 {
-    DataClassification = ToBeClassified;
-
     fields
     {
-        field(1; MyField; Integer)
+        field(1; PK; Integer) { }
+        field(2; UnitPrice; Decimal)
         {
-            DataClassification = ToBeClassified;
-        }
-        field(2; Amount; Decimal)
-        {
-            Caption = 'Amount';
             trigger OnValidate()
             begin
-                Validate(AmountIncludingVat, Amount);
-                Validate(DiscountedAmount, Amount * (1 - Discount / 100));
+                Validate(UnitPriceIncludingVat, UnitPrice);
+                Validate(LineAmount, UnitPrice * (1 - Discount / 100));
             end;
         }
-        field(3; AmountIncludingVat; Decimal)
-        {
-            Caption = 'Amount incl. Vat';
-        }
-        field(4; DiscountedAmount; Decimal)
-        {
-            Caption = 'Discounted Amount';
-        }
+        field(3; UnitPriceIncludingVat; Decimal) { }
+        field(4; LineAmount; Decimal) { }
         field(5; Discount; Decimal)
         {
-            Caption = 'Discount';
-            MaxValue = 100;
-            MinValue = 0;
-
             trigger OnValidate()
             begin
-                Validate(DiscountedAmount, Amount * (1 - Discount / 100));
+                Validate(LineAmount, UnitPrice * (1 - Discount / 100));
             end;
         }
     }
 
-    keys
-    {
-        key(Key1; MyField)
-        {
-            Clustered = true;
-        }
-    }
-
+    /// <summary>
+    /// Validates all amount related fields in the correct order.
+    /// </summary>
     procedure UpdateAmounts(NewAmount: Decimal; NewDiscount: Decimal)
     begin
-        Validate(Amount, NewAmount);
-        Validate(AmountIncludingVat, NewAmount);
-        Validate(DiscountedAmount, NewAmount);
+        Validate(UnitPrice, NewAmount);
+        Validate(UnitPriceIncludingVat, NewAmount);
+        Validate(LineAmount, NewAmount);
         Validate(Discount, NewDiscount);
     end;
 }

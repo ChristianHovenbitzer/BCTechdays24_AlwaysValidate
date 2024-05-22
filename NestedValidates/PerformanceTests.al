@@ -8,11 +8,12 @@ codeunit 50500 ValidateSalesLineQty
         NestedValidate: Record NestedValidate;
         i: Integer;
     begin
-        for i := 0 to 10000 do
-            NestedValidate.Validate(Amount, 100);
-        NestedValidate.Validate(AmountIncludingVat, 100);
-        NestedValidate.Validate(DiscountedAmount, 100);
-        NestedValidate.Validate(Discount, 0);
+        for i := 0 to 10000 do begin
+            NestedValidate.Validate(UnitPrice, 100);
+            NestedValidate.Validate(UnitPriceIncludingVat, 100);
+            NestedValidate.Validate(LineAmount, 100);
+            NestedValidate.Validate(Discount, 0);
+        end;
     end;
 
     [Test]
@@ -22,9 +23,9 @@ codeunit 50500 ValidateSalesLineQty
         i: Integer;
     begin
         for i := 0 to 10000 do begin
-            NestedValidate.Amount := 100;
-            NestedValidate.AmountIncludingVat := 100;
-            NestedValidate.DiscountedAmount := 100;
+            NestedValidate.UnitPrice := 100;
+            NestedValidate.UnitPriceIncludingVat := 100;
+            NestedValidate.LineAmount := 100;
             NestedValidate.Discount := 0;
         end;
     end;

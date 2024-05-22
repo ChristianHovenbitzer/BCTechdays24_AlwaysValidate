@@ -2,8 +2,6 @@
 page 50100 ValidateOrderPage
 {
     PageType = Card;
-    ApplicationArea = All;
-    UsageCategory = Administration;
     SourceTable = ValidateOrderTable;
 
     layout
@@ -12,10 +10,8 @@ page 50100 ValidateOrderPage
         {
             group(GroupName)
             {
-                field(MyField; Rec.MyField)
+                field(PK; Rec.PK)
                 {
-                    ToolTip = 'Specifies the value of the MyField field.';
-
                     trigger OnValidate()
                     begin
                         EventSubs.GetList().Add('ValidateOrderPage - OnValidate');
@@ -68,7 +64,7 @@ pageextension 50100 ValidateOrderPageExt extends ValidateOrderPage
 {
     layout
     {
-        modify(MyField)
+        modify(PK)
         {
             trigger OnBeforeValidate()
             begin

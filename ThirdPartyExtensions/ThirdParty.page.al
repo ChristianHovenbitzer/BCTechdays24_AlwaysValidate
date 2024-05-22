@@ -1,7 +1,6 @@
 page 50400 ThirdParty
 {
     ApplicationArea = All;
-    Caption = 'ThirdParty';
     PageType = Card;
     SourceTable = ThirdParty;
 
@@ -11,22 +10,10 @@ page 50400 ThirdParty
         {
             group(General)
             {
-                field(Amount; Rec.Amount)
-                {
-                    ToolTip = 'Specifies the value of the Amount field.';
-                }
-                field(AmountIncludingVat; Rec.AmountIncludingVat)
-                {
-                    ToolTip = 'Specifies the value of the Amount incl. Vat field.';
-                }
-                field(DiscountedAmount; Rec.DiscountedAmount)
-                {
-                    ToolTip = 'Specifies the value of the Discounted Amount field.';
-                }
-                field(Discount; Rec.Discount)
-                {
-                    ToolTip = 'Specifies the value of the Discount field.';
-                }
+                field(Amount; Rec.Amount) { }
+                field(AmountIncludingVat; Rec.AmountIncludingVat) { }
+                field(DiscountedAmount; Rec.DiscountedAmount) { }
+                field(Discount; Rec.Discount) { }
             }
         }
     }

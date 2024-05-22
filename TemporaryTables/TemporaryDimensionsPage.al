@@ -1,7 +1,5 @@
 page 50200 TemporaryDimensionsPage
 {
-    ApplicationArea = All;
-    Caption = 'TemporaryDimensionsPage';
     PageType = Card;
     SourceTable = TemporaryDimensionsTable;
 

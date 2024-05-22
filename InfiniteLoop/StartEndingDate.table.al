@@ -1,13 +1,8 @@
 table 50200 StartEndingDate
 {
-    DataClassification = ToBeClassified;
-
     fields
     {
-        field(1; PK; Integer)
-        {
-            DataClassification = ToBeClassified;
-        }
+        field(1; PK; Integer) { }
         field(2; StartDate; Date)
         {
             trigger OnValidate()
@@ -21,14 +16,6 @@ table 50200 StartEndingDate
             begin
                 ValidateStartEndDate(StartDate, EndDate);
             end;
-        }
-    }
-
-    keys
-    {
-        key(PK; PK)
-        {
-            Clustered = true;
         }
     }
 
@@ -53,53 +40,5 @@ table 50200 StartEndingDate
         EndDate := EndDateFrom;
         Validate(StartDate);
         Validate(EndDate);
-    end;
-}
-
-page 50200 StartEndingDate
-{
-    PageType = Card;
-    ApplicationArea = All;
-    UsageCategory = None;
-    SourceTable = StartEndingDate;
-
-    layout
-    {
-        area(Content)
-        {
-            group(GroupName)
-            {
-                field(StartDate; Rec.StartDate)
-                {
-                    ToolTip = 'Specifies the value of the StartDate field.';
-                }
-                field(EndDate; Rec.EndDate)
-                {
-                    ToolTip = 'Specifies the value of the EndDate field.';
-                }
-            }
-        }
-    }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
-            }
-        }
-    }
-
-    trigger OnOpenPage()
-    begin
-        if not Rec.Get() then
-            Rec.Insert();
     end;
 }

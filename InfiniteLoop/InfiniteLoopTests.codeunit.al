@@ -2,9 +2,6 @@ codeunit 50200 InfiniteLoopTests
 {
     Subtype = Test;
 
-    var
-        FirstJanuary, FirstFebruary, SecondFebuary, FirstMarch : Date;
-
     [Test]
     procedure TestStartDateAfterEndDate()
     var
@@ -54,6 +51,8 @@ codeunit 50200 InfiniteLoopTests
         //[THEN] then no error thrown  
     end;
 
+    var
+        FirstJanuary, FirstFebruary, SecondFebuary, FirstMarch : Date;
     local procedure SetDefaultDates(var Table: Record StartEndingDate)
     begin
         FirstJanuary := 20240101D;

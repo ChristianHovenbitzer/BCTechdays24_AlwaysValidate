@@ -1,13 +1,9 @@
 table 50100 ValidateOrderTable
 {
-    DataClassification = ToBeClassified;
-
     fields
     {
-        field(1; MyField; Integer)
+        field(1; PK; Integer)
         {
-            DataClassification = ToBeClassified;
-
             trigger OnValidate()
             var
                 EventSubs: Codeunit EventSubs;
@@ -15,19 +11,8 @@ table 50100 ValidateOrderTable
                 EventSubs.GetList().Add('ValidateOrderTable - OnValidate');
             end;
         }
-        field(2; MyField2; Integer)
-        {
-            DataClassification = ToBeClassified;
-        }
     }
 
-    keys
-    {
-        key(Key1; MyField2)
-        {
-            Clustered = true;
-        }
-    }
     trigger OnModify()
     var
         EventSubs: Codeunit EventSubs;
@@ -40,7 +25,7 @@ tableextension 50100 ValidateOrderTableExt extends ValidateOrderTable
 {
     fields
     {
-        modify(MyField)
+        modify(PK)
         {
             trigger OnBeforeValidate()
             begin
