@@ -53,6 +53,12 @@ codeunit 50200 InfiniteLoopTests
 
     var
         FirstJanuary, FirstFebruary, SecondFebuary, FirstMarch : Date;
+
+    /// <summary>
+    /// Table.StartDate := FirstJanuary
+    /// 
+    /// Table.EndDate := FirstFebruary
+    /// </summary>
     local procedure SetDefaultDates(var Table: Record StartEndingDate)
     begin
         FirstJanuary := 20240101D;

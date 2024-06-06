@@ -1,47 +1,63 @@
 {
-    "folders": [
-      {
-        "name": "1 - InfiniteLoop",
-        "path": "InfiniteLoop"
-      },
-      {
-        "name": "2 - TriggerOrder",
-        "path": "TriggerOrder"
-      },
-      {
-        "name": "3 - TemporaryTables",
-        "path": "TemporaryTables"
-      },
-      {
-        "name": "4 - Performance",
-        "path": "Performance"
-      },
-      {
-        "name": "5 - 3rd Party Extensions",
-        "path": "ThirdPartyExtensions"
-      },
-      {
-        "name": "6 - Nested Validates",
-        "path": "NestedValidates"
-      }
-
-    ],
-    "settings": {},
-    "launch": {
-      "configurations": [
-        {
-          "name": "Microsoft cloud sandbox",
-          "request": "launch",
-          "type": "al",
-          "environmentType": "Sandbox",
-          "environmentName": "sandbox",
-          "startupObjectId": 22,
-          "startupObjectType": "Page",
-          "breakOnError": "All",
-          "launchBrowser": true,
-          "enableLongRunningSqlStatements": true,
-          "enableSqlInformationDebugger": true
-        }
-      ]
+  "folders": [
+    {
+      "name": "1 - InfiniteLoop",
+      "path": "InfiniteLoop"
+    },
+    {
+      "name": "2 - TriggerOrder",
+      "path": "TriggerOrder"
+    },
+    {
+      "name": "3 - TemporaryTables",
+      "path": "TemporaryTables"
+    },
+    {
+      "name": "4 - Performance",
+      "path": "Performance"
+    },
+    {
+      "name": "5 - 3rd Party Extensions",
+      "path": "ThirdPartyExtensions"
+    },
+    {
+      "name": "6 - Nested Validates",
+      "path": "NestedValidates"
+    },
+    {
+      "name": "7 - OnLookup",
+      "path": "OnLookup"
     }
+  ],
+  "settings": {
+    "[al]": {
+      "editor.wordBasedSuggestions": "off",
+      "editor.suggestSelection": "first",
+      "editor.formatOnSave": true,
+      "editor.semanticHighlighting.enabled": true,
+      "editor.inlayHints.fontSize": 12,
+    },
+    "al-xml-doc.CheckProcedureDocumentationForType": [ ],
+    "al-xml-doc.AskEnableCheckDocumentationForWorkspace": false,
+    "al-xml-doc.CheckProcedureDocumentationInformationLevel": "Disabled",
+    "al-xml-doc.CheckObjectDocumentationInformationLevel": "Disabled",
+    "al-xml-doc.CheckProcedureDocumentationForAccessLevel": [ ]
+  },
+  "launch": {
+    "configurations": [
+      {
+        "name": "Microsoft cloud sandbox",
+        "request": "launch",
+        "type": "al",
+        "environmentType": "Sandbox",
+        "environmentName": "sandbox",
+        "startupObjectId": 22,
+        "startupObjectType": "Page",
+        "breakOnError": "All",
+        "launchBrowser": true,
+        "enableLongRunningSqlStatements": true,
+        "enableSqlInformationDebugger": true
+      }
+    ]
   }
+}

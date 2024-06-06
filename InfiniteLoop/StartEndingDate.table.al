@@ -20,14 +20,9 @@ table 50200 StartEndingDate
     }
 
     local procedure ValidateStartEndDate(StartDateToValidate: Date; EndDateToValidate: Date)
-    var
-        EndDatePriorToStartDateErr: Label 'Start date must be prior to the end date.';
     begin
-        if EndDateToValidate = 0D then
-            exit;
-
         if EndDateToValidate < StartDateToValidate then
-            Error(EndDatePriorToStartDateErr);
+            Error('Start date must be prior to the end date.');
     end;
 
     procedure SetStartEndDate(StartDateFrom: Date; EndDateFrom: Date)

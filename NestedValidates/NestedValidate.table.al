@@ -28,8 +28,8 @@ table 50500 NestedValidate
     procedure UpdateAmounts(NewAmount: Decimal; NewDiscount: Decimal)
     begin
         Validate(UnitPrice, NewAmount);
-        Validate(UnitPriceIncludingVat, NewAmount);
-        Validate(LineAmount, NewAmount);
+        // Validate(UnitPriceIncludingVat, NewAmount);
+        // Validate(LineAmount, UnitPrice * (1 - Discount / 100));
         Validate(Discount, NewDiscount);
     end;
 }
