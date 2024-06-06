@@ -1,28 +1,28 @@
 {
   "folders": [
     {
-      "name": "1 - InfiniteLoop",
-      "path": "InfiniteLoop"
-    },
-    {
-      "name": "2 - TriggerOrder",
-      "path": "TriggerOrder"
-    },
-    {
-      "name": "3 - TemporaryTables",
-      "path": "TemporaryTables"
-    },
-    {
-      "name": "4 - Performance",
+      "name": "1 - Performance",
       "path": "Performance"
     },
     {
-      "name": "5 - 3rd Party Extensions",
+      "name": "2 - Nested Validates",
+      "path": "NestedValidates"
+    },
+    {
+      "name": "3 - 3rd Party Extensions",
       "path": "ThirdPartyExtensions"
     },
     {
-      "name": "6 - Nested Validates",
-      "path": "NestedValidates"
+      "name": "4 - InfiniteLoop",
+      "path": "InfiniteLoop"
+    },
+    {
+      "name": "5 - TemporaryTables",
+      "path": "TemporaryTables"
+    },
+    {
+      "name": "6 - TriggerOrder",
+      "path": "TriggerOrder"
     },
     {
       "name": "7 - OnLookup",
