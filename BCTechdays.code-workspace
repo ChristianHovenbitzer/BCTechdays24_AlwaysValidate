@@ -37,6 +37,8 @@
       "editor.semanticHighlighting.enabled": true,
       "editor.inlayHints.fontSize": 12,
     },
+    "al.codeAnalyzers": [],
+    "al.enableCodeAnalysis": false,
     "al-xml-doc.CheckProcedureDocumentationForType": [ ],
     "al-xml-doc.AskEnableCheckDocumentationForWorkspace": false,
     "al-xml-doc.CheckProcedureDocumentationInformationLevel": "Disabled",
